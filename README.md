@@ -2,26 +2,22 @@
 
 ## Overview
 
-What is your app? Brief description in a couple of sentences.
-
 Interface that allows users to type any prompt and generate a small collection of images that can be minted on a blockchain testnet. Number of images generated will be at maximum 1 and all on-chain communcation will be with an existing testnet blockchain network.
 
 
 ### Problem
 
-Why is your app needed? Background information around any pain points or other reasons.
-
 Generating images has become easy with tools such as DALL-E, Mid Journey, etc. However, the ease to be able to develop multiple images and at the same time mint them on a blockchain is not available. The app offers a potential new one-stop-shop for minting NFT collections, reducing labor and time spent learning the intricacies of generating smart contracts.
 
 ### User Profile
-
-Who will use your app? How will they use it? Any special considerations that your app must take into account.
 
 The app is open to anyone that wants to generate an NFT collection and test out what they're prompts/ideas might produce. Developers may also be able to alter the app, adding new features for additional blockchain applications.
 
 ### Features
 
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+
+Users can connect their browser wallets, enter a text prompt into a designated input field, generate an image based on that prompt, and mint the image as an NFT on the blockchain. Users can then view their profile with the images they've minted on the app. 
 
 #### Prompt Submission Interface:
 
