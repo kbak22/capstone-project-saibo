@@ -111,7 +111,7 @@ Showcases the final minted NFT.
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
-![Home page] (https://github.com/kyriakos2222/capstone-project-saibo/blob/main/home-page.png)
+![Home page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/home-page.png)
 
 ### Data
 
