@@ -1,10 +1,10 @@
-Saibo
+# Saibo
 
 ## Overview
 
 What is your app? Brief description in a couple of sentences.
 
-Interface that allows users to type any prompt and generate a small collection of images that can be minted on a blockchain testnet. Number of images generated will be at maximum 20 and all on-chain communcation will be with an existing testnet blockchain network.
+Interface that allows users to type any prompt and generate a small collection of images that can be minted on a blockchain testnet. Number of images generated will be at maximum 1 and all on-chain communcation will be with an existing testnet blockchain network.
 
 
 ### Problem
@@ -23,25 +23,95 @@ The app is open to anyone that wants to generate an NFT collection and test out 
 
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
 
+#### Prompt Submission Interface:
+
+An interface where users can submit text prompts for image generation. Option to specify details like style, color preferences, or specific elements to be included in the images.
+
+#### Image Generation from Prompts:
+
+A system to interpret user prompts and generate corresponding images. An option for users to preview these images and possibly request modifications or confirm them.
+
+#### Blockchain Integration for Image Minting:
+
+Functionality to mint the confirmed images as non-fungible tokens (NFTs) on a chosen blockchain. Option for users to select the blockchain on which to mint their NFTs.
+
+#### Gallery or Portfolio Feature:
+
+A gallery or portfolio where users can view their created and minted images. Options for users to share their minted images on social media or other platforms.
 
 
 ## Implementation
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+- Front-End Development:
+
+React.js: For building a dynamic and responsive user interface.
+SCSS: For styling and responsive design.
+
+- Back-End Development:
+
+Node.js with Express.js: For server-side logic and API endpoints.
+
+- Blockchain Integration:
+
+Ethereum Web3.js: For interacting with Ethereum-based testnet blockchains.
+Smart Contract Development: Using Solidity for NFT minting.
+MetaMask: For Ethereum-based testnet transactions.
+
+- Database
+
+Will be using thirdWeb Engine and docker to set up a postgres database. (https://thirdweb.com/engine?ref=blog.thirdweb.com)
+
 
 ### APIs
 
-List any external sources of data that will be used in your app.
+- DALL-E API (OpenAI) for Image Generation:
+
+The primary source for generating images based on user prompts.
+API integration will be needed to send prompts and receive the generated images.
+
+- IPFS (InterPlanetary File System):
+
+For decentralized storage of the generated images.
+
+- Blockchain Networks through thirdweb (https://thirdweb.com/engine?ref=blog.thirdweb.com):
+
+For minting images as NFTs, interaction with blockchain networks like Ethereum is required.
+This involves accessing data related to smart contracts, wallet transactions, and NFT standards (e.g., ERC-721 or ERC-1155).
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+- Home Page:
+
+The landing page of the app where users can enter their prompts to generate images.
+Will feature an overview of the app's capabilities, testimonials, and a call-to-action (CTA) to either sign in or sign up.
+
+
+- Profile User Page:
+
+Displays user information and account settings. Could display a gallery of previously created and minted images.
+
+- Image Generation and Preview Page:
+
+Displays the generated images based on user prompts.
+Users can preview, accept, or request modifications to the images.
+
+
+- NFT Minting Page:
+
+Where users can mint their selected image as an NFT.
+Includes options for adding metadata, choosing the blockchain for minting, and setting prices if they wish to sell the NFT.
+
+- Result/Gallery Page:
+
+Showcases the final minted NFT.
 
 ### Mockups
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
+
+![Home page] (https://www.figma.com/file/kbdwFRNEIjLpRqsxWXj9qZ/Untitled?type=design&node-id=0-1&mode=design)
 
 ### Data
 
