@@ -111,7 +111,7 @@ Showcases the final minted NFT.
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
-![Home page] (https://www.figma.com/file/kbdwFRNEIjLpRqsxWXj9qZ/Untitled?type=design&node-id=0-1&mode=design)
+![Home page] (https://www.figma.com/file/kbdwFRNEIjLpRqsxWXj9qZ/Untitled?type=design&node-id=1-2&mode=design&t=IDEMo6FPYoLufwRs-4)
 
 ### Data
 
