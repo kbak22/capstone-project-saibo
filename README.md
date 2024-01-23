@@ -119,20 +119,55 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ### Data
 
-Describe your data and the relationships between them. You can show this visually using diagrams, or write it out. 
+- User Interaction and Data Input:
+
+Users enter prompts on the website which are then used to generate images. This represents the primary user interaction and data input mechanism in the app.
+
+- Image Generation Using DALL-E (OpenAI):
+
+The prompts entered by users are sent to OpenAI's DALL-E, which generates images based on these prompts. This is a critical data exchange between the app and an external AI service (OpenAI).
+
+- NFT Minting and Blockchain Interaction:
+
+Once an image is generated, users have the option to mint it as an NFT. This involves creating a digital asset on a blockchain network, requiring interaction with blockchain technology and smart contracts.
+The app interacts with a blockchain (like Ethereum) to mint the generated images as NFTs. This process includes sending data to the blockchain (e.g., image metadata) and receiving transaction confirmations.
+
+- Integration with thirdweb Engine:
+
+The app uses thirdweb Engine for backend functionalities, which includes deploying smart contracts, managing NFT transactions, and data storage. This involves data exchanges between the app and thirdweb services.
+
 
 ### Endpoints
 
 List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
 
+The following endpoints will be implemented:
+
+1. Generate image endpooint.
+2. Mint NFT endpoint.
+3. Fetch user profile endpoint.
+4. Update user profile endpoint.
+5. Get NFT collection endpoint.
+
 ### Auth
 
-Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+Logins will be available for users with any crypto wallet installed in their web browser. Use credentials such as username or password will not be required to access the app.
 
 ## Roadmap
 
 Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation. Think about what you can reasonably complete before the due date. The more detail you provide, the easier it will be to build.
 
+- Set up the project repository and basic project structure.
+- Set up the React application structure.
+- Develop the Home, Profile, Image Generation, and NFT Minting pages.
+
+- Initialize the backend server (Node.js/Express).
+- Integrate OpenAI's DALL-E API for image generation.
+- Create API endpoint for image generation (/api/generate).
+
+- Set up thirdweb Engine and smart contract deployment.
+- Implement API endpoint for NFT minting (/api/mintNFT).
+
 ## Nice-to-haves
 
-Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+TBD.
