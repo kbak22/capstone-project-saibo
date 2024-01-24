@@ -1,0 +1,11 @@
+{
+  "name": "capstone-project-saibo",
+  "version": "1.0.0",
+  "description": "Interface that allows users to type any prompt and generate a small collection of images that can be minted on a blockchain testnet. Number of images generated will be at maximum 1 and all on-chain communcation will be with an existing testnet blockchain network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
