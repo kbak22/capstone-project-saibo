@@ -1,7 +1,8 @@
-import { ConnectWallet, ThirdwebProvider, embeddedWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, ThirdwebProvider, embeddedWallet, metamaskWallet } from "@thirdweb-dev/react";
 import { Sepolia } from "@thirdweb-dev/chains";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import ClaimPage from "./pages/ClaimPage/ClaimPage"
+import HomePage from "./pages/HomePage/HomePage";
+import "./App.scss";
 
 
 function App() {
@@ -9,9 +10,9 @@ function App() {
         <ThirdwebProvider
             activeChain={Sepolia}
             clientId={process.env.REACT_APP_PUBLIC_CLIENT_ID}
-            supportedWallets={[embeddedWallet()]}
+            supportedWallets={[embeddedWallet(), metamaskWallet()]}
         >
-            <ClaimPage />
+            <HomePage />
 
 
         </ThirdwebProvider>

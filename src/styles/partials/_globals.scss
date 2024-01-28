@@ -1,0 +1,13 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "fonts" as *;
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Montserrat';
+}
