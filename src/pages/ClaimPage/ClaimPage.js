@@ -1,7 +1,5 @@
 import { ConnectWallet, ThirdwebProvider, embeddedWallet } from "@thirdweb-dev/react";
-
-
-
+import "./ClaimPage.scss";
 
 function ClaimPage() {
     return(
