@@ -1,24 +1,20 @@
-import './App.css';
+import { ConnectWallet, ThirdwebProvider, embeddedWallet } from "@thirdweb-dev/react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import ClaimPage from "./pages/ClaimPage/ClaimPage";
+
+
+export default function Home() {
+    return (
+        <ThirdwebProvider
+            activeChain="sepolia"
+            clientId={process.env.PUBLIC_CLIENT_ID}
+            supportedWallets={[embeddedWallet()]}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <ClaimPage />
+
+
+        </ThirdwebProvider>
+    )
+
 }
 
-export default App;
