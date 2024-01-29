@@ -1,7 +1,9 @@
 import { ConnectWallet, MediaRenderer, ThirdwebProvider, embeddedWallet, useAddress } from "@thirdweb-dev/react";
 import { useState } from "react";
 import "./HomePage.scss";
-
+import WalletConnect from "../../Components/WalletConnect/WalletConnect";
+import ImagePrompt from "../../Components/ImagePrompt/ImagePrompt";
+import ImageDisplay from "../../Components/ImageDisplay/ImageDisplay";
 
 
 function HomePage() {
@@ -23,46 +25,24 @@ function HomePage() {
                 <h1>SAIBO</h1>
             </div>
 
+            <WalletConnect />
+
+            <ImagePrompt
+                isImageGenerated={isImageGenerated}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+                imagePrompt={imagePrompt}
+                setImagePrompt={setImagePrompt}
+            />
 
 
-            <div className="homepage__claimbutton">
-
-                <ConnectWallet />
-            </div>
-            <div className="homepage__prompt-container">
-            <div className="homepage__prompt-container__field">
-                {isImageGenerated ? (
-                    <></>
-                ) : (
-                    <>
-                        <input
-                        className="homepage__prompt-container__field__input"
-                            type="text"
-                            placeholder="Enter your image prompt"
-                            value={imagePrompt}
-                            onChange={(e) => setImagePrompt(e.target.value)}
-                        />
-                    </>
-                )}
-            </div>
-                {!isImageGenerated ? (
-                    <h3>
-                        {isLoading
-                            ? "Generating..."
-                            : "Enter your prompt and click generate"}
-                    </h3>
-
-                ) : (
-                    <div className="generated-image-container">
-                        <MediaRenderer
-                            src={generatedImage}
-                            alt={imagePrompt}
-                        />
-                    </div>
-                )}
-
-
-            </div>
+            <ImageDisplay
+                isImageGenerated={isImageGenerated}
+                isLoading={isLoading}
+                generatedImage={generatedImage}
+                setImageL
+                imagePrompt={imagePrompt}
+            />
 
         </div>
     )
