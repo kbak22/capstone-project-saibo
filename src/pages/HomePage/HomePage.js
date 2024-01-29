@@ -1,4 +1,4 @@
-import { ConnectWallet, ThirdwebProvider, embeddedWallet, useAddress } from "@thirdweb-dev/react";
+import { ConnectWallet, MediaRenderer, ThirdwebProvider, embeddedWallet, useAddress } from "@thirdweb-dev/react";
 import { useState } from "react";
 import "./HomePage.scss";
 
@@ -17,35 +17,53 @@ function HomePage() {
 
     return (
         <div className="homepage">
-            <div className="homepage-container">
 
-                <div className="homepage-title">
-                    <h1>SAIBO</h1>
-                </div>
 
+            <div className="homepage-title">
+                <h1>SAIBO</h1>
             </div>
 
-            <div className="claimbutton-container">
+
+
+            <div className="homepage__claimbutton">
 
                 <ConnectWallet />
-
+            </div>
+            <div className="homepage__prompt-container">
+            <div className="homepage__prompt-container__field">
+                {isImageGenerated ? (
+                    <></>
+                ) : (
+                    <>
+                        <input
+                        className="homepage__prompt-container__field__input"
+                            type="text"
+                            placeholder="Enter your image prompt"
+                            value={imagePrompt}
+                            onChange={(e) => setImagePrompt(e.target.value)}
+                        />
+                    </>
+                )}
+            </div>
                 {!isImageGenerated ? (
-                    <div className="loading-container">
-                        <h3>
-                            {isLoading
-                                ? "Generating..."
-                                : "Enter a prompt below and click generate"}
-                        </h3>
+                    <h3>
+                        {isLoading
+                            ? "Generating..."
+                            : "Enter your prompt and click generate"}
+                    </h3>
+
+                ) : (
+                    <div className="generated-image-container">
+                        <MediaRenderer
+                            src={generatedImage}
+                            alt={imagePrompt}
+                        />
                     </div>
-                )
-
-
-               
-
-
+                )}
 
 
             </div>
+
         </div>
     )
 }
