@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.generated-image-container{
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Set a fixed height */
+    width: 100%; /* Set width to take full width of the container */
+    overflow: hidden; /* Hide overflow */
+    margin: auto;
+}
+
+.generated-image-container img {
+    max-height: 20rem; /* Ensure the image is not taller than the container */
+    max-width: 60%; /* Ensure the image is not wider than the container */
+    object-fit: contain; /* Fit the image within the dimensions without stretching */
+}

@@ -1,0 +1,12 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.errorpage{
+    align-content: center;
+
+    &-text{
+        color: $Primary-Green;
+
+    }
+}

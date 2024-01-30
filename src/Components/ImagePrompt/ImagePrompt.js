@@ -3,9 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 
 
-function ImagePrompt({ isImageGenerated, isLoading, imagePrompt, setImagePrompt, setIsLoading, setGeneratedImage }) {
+function ImagePrompt({ isImageGenerated, isLoading, imagePrompt, setImagePrompt, setIsLoading, setGeneratedImage, setIsImageGenerated }) {
     if (isImageGenerated) return null;
-
 
     const handleGenerateImage = async () => {
         setIsLoading(true);
@@ -19,15 +18,27 @@ function ImagePrompt({ isImageGenerated, isLoading, imagePrompt, setImagePrompt,
             });
 
             const data = await response.json();
+            console.log(data); 
 
-            if (response.ok) {
-                setGeneratedImage(data); 
+            if (data && Array.isArray(data) && data.length > 0) {
+                const base64Image = `data:image/png;base64,${data[0].b64_json}`;
+                setGeneratedImage(base64Image);
+                setIsImageGenerated(true);
                 setIsLoading(false);
             } else {
-                
-                console.error('Error from server:', data);
-                setIsLoading(false);
+                // Handle the case where data.data is not as expected
+                throw new Error('Response from API is not in the expected format');
             }
+
+            // const base64Json = `{"imageData":"data:image/png;base64,${data.data[0].b64_json}"}`;
+            // const obj = JSON.parse(base64Json);
+            // const base64ImageData = obj.imageData;
+            // setGeneratedImage(base64ImageData);
+            // setIsImageGenerated(true);
+            // setIsLoading(false);
+         
+            
+            
         }
         catch (error) {
             console.error('Error while generating image:', error);

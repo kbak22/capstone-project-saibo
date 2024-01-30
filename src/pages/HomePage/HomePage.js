@@ -33,6 +33,8 @@ function HomePage() {
                 setIsLoading={setIsLoading}
                 imagePrompt={imagePrompt}
                 setImagePrompt={setImagePrompt}
+                setIsImageGenerated={setIsImageGenerated}
+                setGeneratedImage={setGeneratedImage}
             />
 
 
@@ -40,7 +42,6 @@ function HomePage() {
                 isImageGenerated={isImageGenerated}
                 isLoading={isLoading}
                 generatedImage={generatedImage}
-                setImageL
                 imagePrompt={imagePrompt}
             />
 
