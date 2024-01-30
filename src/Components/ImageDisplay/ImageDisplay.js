@@ -1,9 +1,23 @@
 import { MediaRenderer } from "@thirdweb-dev/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import "./ImageDisplay.scss";
 
-function ImageDisplay({ isImageGenerated, isLoading, generatedImage, imagePrompt }) {
+function ImageDisplay({
+    isImageGenerated,
+    isLoading,
+    generatedImage,
+    imagePrompt,
+    setImagePrompt,
+    setIsImageGenerated
+}) {
+    useEffect(() => {
+        if (isImageGenerated) {
+            navigate("/mint", { state: { generatedImage, imagePrompt } });
+        }
+    }, [isImageGenerated, generatedImage, imagePrompt]);
+
     const navigate = useNavigate();
 
     if (!isImageGenerated || isLoading) {
@@ -15,6 +29,10 @@ function ImageDisplay({ isImageGenerated, isLoading, generatedImage, imagePrompt
         return (
             <div className="generated-image-container">
                 <img src={generatedImage} alt={imagePrompt || "Generated Image"} />
+                {/* <div className="generated-image-container__buttons">
+                    <button onClick={handleRegenerate}>Regenerate</button>
+                    <button onClick={handleMint}>Mint</button>
+                    </div> */}
             </div>
         );
 

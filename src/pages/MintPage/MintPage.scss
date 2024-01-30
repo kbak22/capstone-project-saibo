@@ -1,0 +1,20 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.mint-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+  
+}
+
+.regenerate-button, .mint-button{
+    margin-top: 1rem;
+        background-color: $Secondary-Green;
+        border-radius: 8px;
+        width: 9rem;
+        padding: 0.2rem;
+}
