@@ -29,13 +29,6 @@ function ImagePrompt({ isImageGenerated, isLoading, imagePrompt, setImagePrompt,
                 // Handle the case where data.data is not as expected
                 throw new Error('Response from API is not in the expected format');
             }
-
-            // const base64Json = `{"imageData":"data:image/png;base64,${data.data[0].b64_json}"}`;
-            // const obj = JSON.parse(base64Json);
-            // const base64ImageData = obj.imageData;
-            // setGeneratedImage(base64ImageData);
-            // setIsImageGenerated(true);
-            // setIsLoading(false);
          
             
             
