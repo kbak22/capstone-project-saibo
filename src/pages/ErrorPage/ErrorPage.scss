@@ -2,11 +2,25 @@
 @use "../../styles/partials/mixins" as *;
 
 
-.errorpage{
-    align-content: center;
-
-    &-text{
-        color: $Primary-Green;
-
+.errorpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // This makes the container the full height of the viewport
+    text-align: center; // This centers the text if it wraps onto multiple lines
+  
+    &-text {
+      color: $Primary-Green;
+      width: 100%; // This ensures the text respects the flexbox centering
     }
-}
+
+    &-button{
+        margin-top: 1rem;
+        background-color: $Secondary-Green;
+        border-radius: 8px;
+        width: 9rem;
+        padding: 0.2rem;
+    
+    }
+  }

@@ -13,7 +13,8 @@
 }
 
 .generated-image-container img {
-    max-height: 20rem; /* Ensure the image is not taller than the container */
-    max-width: 60%; /* Ensure the image is not wider than the container */
+    max-height: 40rem; /* Ensure the image is not taller than the container */
+    max-width: 30rem; /* Ensure the image is not wider than the container */
     object-fit: contain; /* Fit the image within the dimensions without stretching */
+    padding-bottom: 1rem;
 }
