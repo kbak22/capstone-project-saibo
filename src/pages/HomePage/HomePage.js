@@ -22,7 +22,7 @@ function HomePage() {
 
 
             <div className="homepage-title">
-                <h1>SAIBO</h1>
+                <h1>SaiBO</h1>
             </div>
 
             <WalletConnect />

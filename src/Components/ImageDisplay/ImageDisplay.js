@@ -29,10 +29,6 @@ function ImageDisplay({
         return (
             <div className="generated-image-container">
                 <img src={generatedImage} alt={imagePrompt || "Generated Image"} />
-                {/* <div className="generated-image-container__buttons">
-                    <button onClick={handleRegenerate}>Regenerate</button>
-                    <button onClick={handleMint}>Mint</button>
-                    </div> */}
             </div>
         );
 
