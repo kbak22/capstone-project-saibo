@@ -8,7 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@thirdweb-dev/react": "^4.4.0",
-    "@thirdweb-dev/sdk": "^4.0.28",
+    "@thirdweb-dev/sdk": "^4.0.31",
     "assert": "^2.1.0",
     "axios": "^1.6.7",
     "browserify-zlib": "^0.2.0",
