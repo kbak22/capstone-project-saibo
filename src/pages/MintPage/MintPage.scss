@@ -11,10 +11,21 @@
   
 }
 
-.regenerate-button, .mint-button{
+.regenerate-button, .mint-button, .view-button{
     margin-top: 1rem;
         background-color: $Secondary-Green;
         border-radius: 8px;
         width: 9rem;
         padding: 0.2rem;
+}
+
+.title-input-container{
+    padding: 0.4rem;
+}
+
+.title-input{
+    border-radius: 8px;
+    width: 9rem;
+    padding: 0.2rem;
+
 }
