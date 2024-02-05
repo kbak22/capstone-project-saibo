@@ -15,8 +15,6 @@ The app is open to anyone that wants to generate an NFT collection and test out 
 
 ### Features
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
-
 Users can connect their browser wallets, enter a text prompt into a designated input field, generate an image based on that prompt, and mint the image as an NFT on the blockchain. Users can then view their profile with the images they've minted on the app. 
 
 #### Prompt Submission Interface:
@@ -107,10 +105,10 @@ Showcases the final minted NFT.
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
-![Home page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/home-page.png)
-![Profile page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/profile-page.png)
-![Image Preview page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/image-preview-page.png)
-![Minting page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/minting-page.png)
+![Home page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/mockups-temp/home-page.png)
+![Profile page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/mockups-temp/profile-page.png)
+![Image Preview page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/mockups-temp/image-preview-page.png)
+![Minting page](https://github.com/kyriakos2222/capstone-project-saibo/blob/main/mockups-temp/minting-page.png)
 
 
 ### Data
