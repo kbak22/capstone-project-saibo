@@ -17,6 +17,7 @@ function MintPage() {
     const address = useAddress();
     const { generatedImage, imagePrompt } = location.state || {};
     const [isMinting, setIsMinting] = useState(false);
+    const [title, setTitle] = useState("");
     const [isMinted, setIsMinted] = useState(false);
 
 
@@ -45,7 +46,7 @@ function MintPage() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ userImage: imageURI, address})
+                body: JSON.stringify({ userImage: imageURI, address, title })
             });
 
 
@@ -53,7 +54,7 @@ function MintPage() {
                 const errorData = await response.json();
                 throw new Error('Failed to mint image');
             }
-            
+
             else {
                 setIsMinting(false);
                 setIsMinted(true);
@@ -79,11 +80,21 @@ function MintPage() {
             <div className="generated-image-container">
                 <img src={generatedImage} alt={imagePrompt || "Generated Image"} />
             </div>
+            <div className="title-input-container">
+                <input className="title-input"
+                    id="title"
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    placeholder="Enter NFT Title"
+                />
+            </div>
             <div className="image-actions">
                 <button className="regenerate-button" onClick={handleRegenerate}>Re-generate</button>
                 <button className="mint-button" onClick={handleMint}>
                     {isMinting ? "Minting..." : "Mint"}
                 </button>
+
             </div>
         </div>
     );
